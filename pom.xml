@@ -20,6 +20,18 @@ JSON Schema (http://tools.ietf.org/html/draft-zyp-json-schema-03) version 3 gene
     <developerConnection>scm:git:ssh://git@github.com/Cosium/jackson-module-jsonSchema.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
+  <distributionManagement>
+      <repository>
+          <id>cosium-repo</id>
+          <name>Internal Release Repository</name>
+          <url>http://repo.cosium.com/repository/internal/</url>
+      </repository>
+      <snapshotRepository>
+          <id>cosium-repo-snapshots</id>
+          <name>Internal Snapshot Repository</name>
+          <url>http://repo.cosium.com/repository/snapshots/</url>
+      </snapshotRepository>
+  </distributionManagement>
   <developers>
         <developer>
             <id>jackphel</id>
