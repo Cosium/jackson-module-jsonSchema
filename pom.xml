@@ -32,6 +32,30 @@ JSON Schema (http://tools.ietf.org/html/draft-zyp-json-schema-03) version 3 gene
           <url>http://repo.cosium.com/repository/snapshots/</url>
       </snapshotRepository>
   </distributionManagement>
+    <repositories>
+        <repository>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>cosium-repo</id>
+            <name>Cosium Internal Repository</name>
+            <url>http://repo.cosium.com/repository/internal</url>
+        </repository>
+        <repository>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <id>cosium-repo-snapshots</id>
+            <name>Cosium Internal Snapshots Repository</name>
+            <url>http://repo.cosium.com/repository/snapshots</url>
+        </repository>
+    </repositories>
   <developers>
         <developer>
             <id>jackphel</id>
