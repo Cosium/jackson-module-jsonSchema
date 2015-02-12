@@ -8,7 +8,7 @@
   <groupId>com.fasterxml.jackson.module</groupId>
   <artifactId>jackson-module-jsonSchema</artifactId>
   <name>jackson-module-jsonSchema</name>
-  <version>2.4.8.cosium-fork</version>
+  <version>2.4.9.cosium-fork-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <description>Add-on module for Jackson (http://jackson.codehaus.org) to support
 JSON Schema (http://tools.ietf.org/html/draft-zyp-json-schema-03) version 3 generation.
@@ -18,7 +18,7 @@ JSON Schema (http://tools.ietf.org/html/draft-zyp-json-schema-03) version 3 gene
     <url>https://github.com/Cosium/jackson-module-jsonSchema</url>
     <connection>scm:git:ssh://git@github.com/Cosium/jackson-module-jsonSchema.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/Cosium/jackson-module-jsonSchema.git</developerConnection>
-    <tag>jackson-module-jsonSchema-2.4.8.cosium-fork</tag>
+    <tag>HEAD</tag>
   </scm>
   <distributionManagement>
       <repository>
