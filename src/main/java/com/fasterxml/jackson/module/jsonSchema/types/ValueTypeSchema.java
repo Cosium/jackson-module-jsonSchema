@@ -1,10 +1,12 @@
 package com.fasterxml.jackson.module.jsonSchema.types;
 
-import java.util.*;
-
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonValueFormat;
 import com.fasterxml.jackson.module.jsonSchema.JsonSchema;
+
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 /**
  * This class represents a {@link JsonSchema} 
@@ -22,6 +24,7 @@ public abstract class ValueTypeSchema extends SimpleTypeSchema {
 	   (Section 5.15).
 	 */
 	@JsonProperty(value = "enum")
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
 	private Set<String> enums = new LinkedHashSet<String>();
 	
 	/**
