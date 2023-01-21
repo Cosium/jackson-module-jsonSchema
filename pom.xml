@@ -13,7 +13,7 @@
   <groupId>com.fasterxml.jackson.module</groupId>
   <artifactId>jackson-module-jsonSchema-parent</artifactId>
   <name>jackson-module-jsonSchema-parent</name>
-  <version>2.14.1</version>
+  <version>2.14.1.0.cosium-SNAPSHOT</version>
   <packaging>pom</packaging>
   <description>Add-on module for Jackson (http://jackson.codehaus.org) to support
 JSON Schema (http://tools.ietf.org/html/draft-zyp-json-schema-03) version 3 generation.
@@ -74,4 +74,48 @@ JSON Schema (http://tools.ietf.org/html/draft-zyp-json-schema-03) version 3 gene
       </snapshots>
     </repository>
   </repositories>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>${version.plugin.release}</version>
+          <configuration>
+            <mavenExecutorId>forked-path</mavenExecutorId>
+            <useReleaseProfile>false</useReleaseProfile>
+            <arguments>-P!release</arguments>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>${version.plugin.release}</version>
+        <configuration>
+          <mavenExecutorId>forked-path</mavenExecutorId>
+          <useReleaseProfile>false</useReleaseProfile>
+          <arguments>-P!release -DskipTests</arguments>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.sonatype.plugins</groupId>
+        <artifactId>nexus-staging-maven-plugin</artifactId>
+        <version>1.6.8</version>
+        <extensions>false</extensions>
+        <configuration>
+          <serverId>sonatype-nexus-staging</serverId>
+          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+          <skipNexusStagingDeployMojo>true</skipNexusStagingDeployMojo>
+          <skipLocalStaging>true</skipLocalStaging>
+          <skipRemoteStaging>true</skipRemoteStaging>
+          <skipStaging>true</skipStaging>
+          <skipStagingRepositoryClose>true</skipStagingRepositoryClose>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
